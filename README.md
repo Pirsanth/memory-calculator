@@ -17,7 +17,7 @@ Just a lits of bug fixes since I initially uploaded the project on Github. Gives
 * Fixed an answer-line bug where the value of the answer on the display's answer-line and cover's ul element does not tally with the value of answer stored internally in operations.savedAnswer.
 
 
-## Reflecting on my growth since my first GitHub project
+# Reflecting on my growth since my first GitHub project
 My first project on GitHub was a to-do list. I had a limited knowledge of how Javascript worked then and I often got jQuery and Javascript mixed up. I had followed a lengthy tutorial (Coffeerun) from a book called WebNerdRanch and I reversed engineered it a couple of times. I then modified it heavily by adding a slider, tables for uncompleted tasks, a timer for each task, a completed tasks list and much more to turn it into a to-do list.
 Since then I have studied Javascript and CSS heavily and decided to build this project without using any frameworks such as Bootstrap or jQuery. I now understand the tools much better and to prove it I have included a What’s Going On section in this Readme. I have also read a couple of blog posts and articles on UI design and have thus included the features described in the Memory Calculator description above.
 For my future project I envisage that it will involve a backend using Node.js, I will make use of ES6 Javascript features such as Promises and that it will involve a larger amount of asynchronous operation.
