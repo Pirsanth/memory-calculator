@@ -1,4 +1,8 @@
 # Memory Calculator
+
+[Link to the project](https://pirsanth.github.io/memory-calculator)
+
+
 This is a completely front-end project made with **vanilla ES5 Javascript, HTML and CSS**. It uses **Local Storage** to store the equations saved for the next browsing session (as long as the source URL and protocol is the same).
 
 
@@ -8,10 +12,16 @@ The design of the app is also such that there is an implied clear line from the 
 
 **Note:** This calculator does not follow BODMAS which is the rule for division and multiplication before addition and subtraction. This is within the design of the app and is not a bug. I originally intended for the operations.js to behave the way it does so that a user could press C to return from a syntax error without losing what has already been input into the equation. This was implemented due to the frustration I have faced on some websites where upon submitting the form it would return empty and signal an error in input.
 
+## Bug Fixes
+Just a lits of bug fixes since I initially uploaded the project on Github. Gives me a change to get more familiar with **git** as well.
+* Fixed an answer-line bug where the value of the answer on the display's answer-line and cover's ul element does not tally with the value of answer stored internally in operations.savedAnswer.
+
+
 ## Reflecting on my growth since my first GitHub project
 My first project on GitHub was a to-do list. I had a limited knowledge of how Javascript worked then and I often got jQuery and Javascript mixed up. I had followed a lengthy tutorial (Coffeerun) from a book called WebNerdRanch and I reversed engineered it a couple of times. I then modified it heavily by adding a slider, tables for uncompleted tasks, a timer for each task, a completed tasks list and much more to turn it into a to-do list.
 Since then I have studied Javascript and CSS heavily and decided to build this project without using any frameworks such as Bootstrap or jQuery. I now understand the tools much better and to prove it I have included a What’s Going On section in this Readme. I have also read a couple of blog posts and articles on UI design and have thus included the features described in the Memory Calculator description above.
 For my future project I envisage that it will involve a backend using Node.js, I will make use of ES6 Javascript features such as Promises and that it will involve a larger amount of asynchronous operation.
+
 
 ## What’s going on
 I intend this to be an explanation of Javascript and how it specifically relates to the code in my project. It is in no way meant to be an exhaustive explanation of the Javascript concepts presented. It is just so I can prove that I understand what is going on in my project.
@@ -40,7 +50,7 @@ window.App = App;
 ```
 In the snippet above I attach the Display constructor function as a property of the App object defined in the global namespace. The App object is the returned module object that gets extended when passed into the other IFFEs in the other Javascript files. I have attached the constructor functions to the App object so as to not clutter the global namespace with identifiers.
 
-One of the main problem with the IFFE module pattern is that we as developers have to manage the dependencies as each module may be dependent on another module for its execution. To handle this I have the main.js file. It handles the main logic which ties all the modules together and it the last script tag. So, it will be run only after all the submodules that extend the App module object are loaded. Within each submodule as well the first line of the IFFE (for example `var App = window.App || {};` in the above) at the start of the IFFE is just so I do not have to have to be pedantic about the order of each submodule's script tag in the HTML document. I would only have to ensure that the main.js script tag is the last. 
+One of the main problem with the IFFE module pattern is that we as developers have to manage the dependencies as each module may be dependent on another module for its execution. To handle this I have the main.js file. It handles the main logic which ties all the modules together and it the last script tag. So, it will be run only after all the submodules that extend the App module object are loaded. Within each submodule as well the first line of the IFFE (for example `var App = window.App || {};` in the above) at the start of the IFFE is just so I do not have to have to be pedantic about the order of each submodule's script tag in the HTML document. I would only have to ensure that the main.js script tag is the last.
 
 **Note:** Declaring variables in the global namespace is the same as attaching a property to the global window object.
 
