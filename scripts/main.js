@@ -173,6 +173,13 @@
       if(operations.savedAnswer){
         buttonControl.animationDepressed(element);
         display.appendNumberToEquation(operations.savedAnswer);
+
+        if(operations.getNumberOfOperations() !== -1){
+            var number = display.getNumberAtEnd();
+            var newAnswer = operations.updateAnswer(number);
+            display.setAnswerLine(newAnswer);
+          }
+
       }
       else{
         buttonControl.animationInvalid(element);
